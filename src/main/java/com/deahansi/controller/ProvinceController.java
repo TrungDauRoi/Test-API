@@ -53,7 +53,7 @@ public class ProvinceController {
         province.setOrderNo(provinceModel.getOrderNo());
         service.repository.findById(id).map(province1 -> {
             province1 = province;
-            return service.repository.saveAndFlush(province);
+            return service.repository.saveAndFlush(province1);
         }).orElseGet(() -> {
             return service.repository.saveAndFlush(province);
         });
